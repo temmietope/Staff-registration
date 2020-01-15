@@ -1,0 +1,24 @@
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  width: 80%;
+  height: inherit;
+  padding: 5%;
+  box-sizing: border-box;
+  color: rgb(68, 66, 66);
+}
+.info p {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 60%;
+  border-bottom: 1px solid black;
+  margin: 0;
+  padding: 10px;
+}
+
+.info h4 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}

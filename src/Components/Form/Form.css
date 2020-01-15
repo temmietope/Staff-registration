@@ -1,14 +1,25 @@
 form {
-  width: 80%;
+  width: 60%;
+  color: rgba(41, 39, 39, 0.815);
 }
 form .label {
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
   margin-bottom: 2%;
+  height: 2rem;
+}
+form label {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 input {
-  height: 1rem;
+  height: 1.8rem;
+  font-size: 1rem;
+  outline: none;
+  padding-left: 1rem;
 }
 form button {
   border: none;
@@ -20,4 +31,14 @@ form button {
   font-size: 1rem;
   font-weight: bold;
   margin-top: 4%;
+  outline: none;
+  margin-bottom: 2%;
+}
+form .create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .create h4 {
+  font-size: 2rem;
 }

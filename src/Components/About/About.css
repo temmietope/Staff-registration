@@ -1,0 +1,9 @@
+.about{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+p{
+    width: 70%;
+}

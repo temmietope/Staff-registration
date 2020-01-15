@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import sweetalert from "sweetalert";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import "./Home.css";
 import axios from "axios";
 
-class Home extends Component {
+class StaffList extends Component {
   state = {
     staffList: []
   };
@@ -41,11 +41,19 @@ class Home extends Component {
     return (
       <div className="home">
         <h3>StaffList</h3>
+        <div className="add-new">
+          <Link to="/create">
+            <button>Add new Staff</button>
+          </Link>
+        </div>
         <div className="list">
           {this.state.staffList.map(staff => {
             return (
               <li key={staff.uid}>
-                {staff.firstname}{" "}
+                <span>
+                  {" "}
+                  {staff.firstname} {staff.lastname}
+                </span>
                 <div className="buttons">
                   <button onClick={e => this.edit(e, staff.uid)}>
                     Edit Info
@@ -69,4 +77,4 @@ class Home extends Component {
   }
 }
 
-export default withRouter(Home);
+export default withRouter(StaffList);

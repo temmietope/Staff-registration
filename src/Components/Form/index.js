@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import sweetalert from "sweetalert";
 import axios from "axios";
-
+import {Link} from "react-router-dom"
 import "./Form.css";
 
 class Form extends Component {
@@ -22,7 +22,7 @@ class Form extends Component {
     e.preventDefault();
     const { staff } = this.state;
 
-    //Register User
+    //Register Staff
     axios
       .post(`http://192.168.0.164:8000/staff/create`, {
         ...staff
@@ -54,9 +54,11 @@ class Form extends Component {
           this.submitDetails(e);
         }}
       >
-        <h4>Create new Staff</h4>
+        <div className="create">
+          <h4>Create new Staff</h4>
+        </div>
         <div className="label">
-          <label>Firstname</label>
+          <label>Firstname : </label>
 
           <input
             type="text"
@@ -70,7 +72,7 @@ class Form extends Component {
         </div>
 
         <div className="label">
-          <label>Lastname</label>
+          <label>Lastname : </label>
 
           <input
             type="text"
@@ -84,7 +86,7 @@ class Form extends Component {
         </div>
 
         <div className="label">
-          <label>email</label>
+          <label>Email : </label>
 
           <input
             type="email"
@@ -98,7 +100,7 @@ class Form extends Component {
         </div>
 
         <div className="label">
-          <label>sex</label>
+          <label>Sex : </label>
 
           <input
             type="text"
@@ -112,7 +114,7 @@ class Form extends Component {
         </div>
 
         <div className="label">
-          <label>State</label>
+          <label>State : </label>
 
           <input
             type="text"
@@ -126,7 +128,7 @@ class Form extends Component {
         </div>
 
         <div className="label">
-          <label>Country</label>
+          <label>Country : </label>
 
           <input
             type="text"
@@ -139,6 +141,8 @@ class Form extends Component {
           />
         </div>
         <button type="submit"> Submit</button>
+
+        <Link to="/all-staff">Back to home</Link>
       </form>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./ViewInfo.css";
 
 class ViewInfo extends Component {
   state = {
@@ -23,15 +24,26 @@ class ViewInfo extends Component {
       country
     } = this.state.staff;
     return (
-      <div>
-        {console.log(firstname)}
+      <div className="info">
         <h4>{firstname}</h4>
-        <p>Firstname: {firstname}</p>
-        <p>Lastname: {lastname}</p>
-        <p>Email: {email}</p>
-        <p>Sex: {sex}</p>
-        <p>State: {state}</p>
-        <p>Country: {country}</p>
+        <p>
+          Firstname: <span>{firstname}</span>
+        </p>
+        <p>
+          Lastname: <span>{lastname}</span>
+        </p>
+        <p>
+          Email: <span>{email}</span>
+        </p>
+        <p>
+          Sex: <span>{sex}</span>
+        </p>
+        <p>
+          State: <span>{state}</span>
+        </p>
+        <p>
+          Country: <span>{country}</span>
+        </p>
       </div>
     );
   }

@@ -16,7 +16,6 @@ class EditStaff extends Component {
 
   async componentDidMount() {
     let id = this.props.history.location.state;
-
     this.setState({ id: id });
     let staff = await axios.get(`http://192.168.0.164:8000/staff/${id}`);
     console.log(staff);
@@ -32,7 +31,7 @@ class EditStaff extends Component {
     e.preventDefault();
     const { id, staff } = this.state;
 
-    //Edit User
+    //Edit Staff
     axios
       .patch(`http://192.168.0.164:8000/staff/${id}`, {
         ...staff
@@ -63,7 +62,10 @@ class EditStaff extends Component {
           this.submitDetails(e);
         }}
       >
-        <h4>Create new Staff</h4>
+        <div className="create">
+          <h4>Edit Information</h4>
+        </div>
+
         <div className="label">
           <label>Firstname</label>
 
@@ -93,7 +95,7 @@ class EditStaff extends Component {
         </div>
 
         <div className="label">
-          <label>email</label>
+          <label>Email</label>
 
           <input
             type="email"
@@ -107,7 +109,7 @@ class EditStaff extends Component {
         </div>
 
         <div className="label">
-          <label>sex</label>
+          <label>Sex</label>
 
           <input
             type="text"
