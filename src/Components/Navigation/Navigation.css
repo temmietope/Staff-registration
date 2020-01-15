@@ -31,5 +31,5 @@ nav h2 {
 
 }
 nav .active{
-    color: rgb(192, 92, 92)
+    border-bottom: 2px solid white;
 }
