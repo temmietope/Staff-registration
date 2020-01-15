@@ -22,8 +22,6 @@ class EditStaff extends Component {
     console.log(staff);
     staff = staff.data.data;
     this.setState({ staff: staff });
-    console.log("you");
-    console.log(this.state.staff);
   }
 
   handleChange = e => {
