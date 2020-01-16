@@ -18,9 +18,8 @@ nav .link {
   margin-left: 2rem;
 }
 nav .brandname {
-    text-decoration: none;
-    color: white;
-
+  text-decoration: none;
+  color: white;
 }
 nav h2 {
   margin-right: auto;
@@ -28,8 +27,21 @@ nav h2 {
   font-size: 2rem;
   letter-spacing: 2px;
   font-weight: bolder;
-
 }
-nav .active{
-    border-bottom: 2px solid white;
+nav .active {
+  border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    height: 5%;
+    padding: 0 3%;
+  }
+  nav .link {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  nav h2 {
+    font-size: 1rem;
+  }
 }

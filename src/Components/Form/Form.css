@@ -42,3 +42,39 @@ form .create {
 form .create h4 {
   font-size: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 80%;
+    font-size: 0.5rem;
+  }
+  form .label {
+    width: 100%;
+    margin-bottom: 1%;
+    height: 1.2rem;
+  }
+  form label {
+    font-weight: bold;
+   font-size: 0.5rem;
+  }
+  input {
+    height: 0.8rem;
+    font-size: 0.7rem;
+    padding-left: 0.4rem;
+  }
+  form button {
+    height: 20px;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    margin-top: 4%;
+  }
+  form .create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form .create h4 {
+    font-size: 1rem;
+  }
+  
+}

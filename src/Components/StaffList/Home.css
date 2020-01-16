@@ -72,3 +72,45 @@
   font-weight: bold;
   outline: none;
 }
+
+@media screen and (max-width: 768px) {
+  .home .list li {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 60% 40%;
+    padding: 1%;
+    box-sizing: border-box;
+  }
+  .home .list li span {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 0.5rem;
+  }
+  .home .list li button {
+    font-size: 0.5rem;
+    font-weight: bold;
+    outline: none;
+    padding: 2px 3px;
+    margin-left: 1px;
+    border-radius: 1%;
+    box-sizing: border-box;
+  }
+  .home .list li .buttons {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .home h3 {
+    font-size: 1rem;
+  }
+  .add-new {
+    text-align: right;
+    width: 80%;
+    height: 8%;
+    margin-bottom: 1.5%;
+  }
+  .add-new button {
+    padding: 6px 12px;
+    font-size: 0.5rem;
+  }
+}
