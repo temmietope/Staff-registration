@@ -15,6 +15,7 @@ function App() {
         <Router>
           <Navigation />
 
+          <Route exact path="/" component={StaffList} />
           <Route exact path="/all-staff" component={StaffList} />
           <Route exact path="/about" component={About} />
           <Route exact path="/create" component={Form} />
